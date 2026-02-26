@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this framework or course material, please cite it as below."
+authors:
+  - family-names: "Huerta"
+    given-names: "Jesus"
+    alias: "mindhack03d"
+title: "Symbolic Prompting Framework: Structured Prompt Programming"
+date-released: 2026-02-21
+url: "https://github.com/mindhack03d/SymbolicPrompting"
+keywords:
+  - prompt-engineering
+  - symbolic-ai
+  - state-machines
+  - llm-optimization
