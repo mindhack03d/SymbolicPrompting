@@ -1,0 +1,1042 @@
+{
+  "name": "NPM_EXTRACT_COMPRESS_github",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -880,
+        400
+      ],
+      "id": "d0501611-a1e2-445a-a980-defeaebc336b",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "feaa4d98-12a6-47cd-a36a-5f684a11bbf9",
+              "name": "LLM_Model",
+              "value": "WRITE_YOUR_MODEL",
+              "type": "string"
+            },
+            {
+              "id": "230ffde9-70e1-4ad5-bb4c-a9f1e7276035",
+              "name": "prompt_format_1",
+              "value": "symbolic",
+              "type": "string"
+            },
+            {
+              "id": "d2f8dcb4-e256-4f58-8c16-977406f32bad",
+              "name": "prompt_format_2",
+              "value": "dsl_json",
+              "type": "string"
+            },
+            {
+              "id": "9a3130cd-7a9c-4182-8052-2cc186ef8f19",
+              "name": "prompt_format",
+              "value": "normal",
+              "type": "string"
+            },
+            {
+              "id": "b917cd9c-5ab1-4102-9663-f5055600cb42",
+              "name": "Execute_Number",
+              "value": 10,
+              "type": "number"
+            },
+            {
+              "id": "540de4b8-a5ae-48bb-a156-bb57b4404ea6",
+              "name": "counter",
+              "value": 1,
+              "type": "number"
+            },
+            {
+              "id": "3860d286-5078-4c71-8f47-8af9866305ab",
+              "name": "time_out_request",
+              "value": "50000",
+              "type": "string"
+            },
+            {
+              "id": "accb56ab-bd49-40ad-b265-6c85d1a8e6c6",
+              "name": "Input_Text",
+              "value": "   In the fast-paced world of software development, open source dependencies are the building blocks that enable innovation and efficiency. But as we've seen time and again, they can also introduce significant risks if not properly managed. The recent supply chain attack on the npm registry, uncovered September 8, 2025, serves as a stark reminder of these vulnerabilities. Attackers compromised 18 widely used packages through a phishing campaign targeting open source project maintainers, and published malicious versions that could have impacted billions of downloads weekly.        What happened in the attack?     The incident involved popular utility libraries essential for tasks like color manipulation, debugging, and ANSI string handling in JavaScript applications. The compromised packages included  ansi-regex (version 6.2.1) ansi-styles (6.2.2) backslash (0.2.1) chalk (5.6.1) chalk-template (1.1.1) color-convert (3.1.1) color-name (2.0.1) color-string (2.1.1) debug (4.4.2) has-ansi (6.0.1) is-arrayish (0.3.3) simple-swizzle (0.2.3) slice-ansi (7.1.1) strip-ansi (7.1.1) supports-color (10.2.1) supports-hyperlinks (4.1.1) wrap-ansi (9.0.1) And others like color (5.0.1)  These packages collectively boast over 2 billion weekly downloads, making this one of the largest supply chain incidents in npm's history. The attackers injected obfuscated JavaScript code designed to act as a cryptocurrency stealer. By wrapping browser APIs, the malware intercepted web3 transactions and silently replaced wallet addresses to redirect funds to the attacker's control. Fortunately, the attack was detected quickly—thanks in part to a well-known obfuscator that made the malicious code easier to spot. Although the compromised versions were downloaded over 2.5 million times, the actual financial impact was minimal, with only around $500 in stolen cryptocurrency reported. Still, the potential for widespread damage was enormous, highlighting how a single point of failure in the open source ecosystem can ripple through countless applications.        The broader implications for your software supply chain     This event underscores a growing trend: Supply chain attacks are becoming more sophisticated and targeted. Phishing attacks on open source project maintainers to gain publishing rights bypasses traditional security measures, allowing bad actors to inject malware directly into trusted repositories. For organizations relying on npm packages—whether in front-end UI components or back-end services—the risks include data exposure, unauthorized access, and compromised production environments. Without proper visibility into your dependencies, it's challenging to identify and respond to such threats. This is where a Software Bill of Materials (SBOM) becomes invaluable. An SBOM is a comprehensive inventory of all components in an application, including their versions, licenses, and potential vulnerabilities. Having this data at your fingertips makes it faster and easier to find and remediate any component that is discovered to be vulnerable or becomes compromised.        How Black Duck can help strengthen your defenses     At Black Duck, we've long advocated for proactive supply chain security, and tools like software composition analysis (SCA) are designed to address exactly these kinds of challenges. Black Duck® SCA offers complete visibility into your software dependencies, helping you detect malicious packages early in the development life cycle. For instance, Black Duck SCA can identify anomalous or compromised components, such as those with obfuscated code or unexpected behaviors. And it can generate SBOMs in standardized formats like SPDX and CycloneDX, ensuring compliance with regulations and building trust with your stakeholders. In the wake of this npm attack, teams using Black Duck SCA could quickly audit their dependency manifests (e.g., package-lock.json) for the affected versions, purge any poisoned caches, and rebuild from safe sources. Additionally, integrating Black Duck SCA into your CI/CD pipelines enables automated checks that block vulnerable or malicious dependencies before they reach production. This not only mitigates immediate risks but also fosters a secure-by-design culture.        Key takeaways and recommendations     As we reflect on this incident, here are some practical steps to enhance your supply chain security.  Audit your dependencies regularly: Review lockfiles and registries for known compromised versions. Tools like Black Duck SCA make this process efficient and scalable. Implement multifactor authentication and access controls: Encourage open source project maintainers to use strong security practices to prevent phishing successes. Generate and share SBOMs: Make SBOMs a standard part of your release process to provide transparency and enable quick vulnerability assessments. Monitor for runtime anomalies: Look for unusual behaviors in logs, such as unexpected network activity or API manipulations. Stay informed and act swiftly: Subscribe to security alerts from sources like npm and integrate threat intelligence into your tools.  Supply chain attacks like this npm incident are a call to action for all of us in the software community. By prioritizing visibility, detection, and remediation, we can turn these challenges into opportunities to build more resilient applications. If you're looking to evaluate how Black Duck can fit into your security strategy, reach out to our team—we're here to help secure your software from the ground up.     ",
+              "type": "string"
+            },
+            {
+              "id": "a2a6f209-cf63-418b-bae1-e81e826d7deb",
+              "name": "URL_MODEL",
+              "value": "WRITE_YOUR_URL FORMAT (https://... or http://)",
+              "type": "string"
+            },
+            {
+              "id": "f923b745-5e45-47d7-b214-2db0af45da08",
+              "name": "model_header",
+              "value": "WRITE YOUR HEADER (Example: x-llm-api-key)",
+              "type": "string"
+            },
+            {
+              "id": "ba790699-fb20-43f4-9730-bc8b3fcf9467",
+              "name": "model_api_key",
+              "value": "WRITE YOUR API KEY",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -624,
+        400
+      ],
+      "id": "02710385-134a-4740-9f8d-05f2fdb88128",
+      "name": "TEMP_VARIABLES",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "outputFieldName": "time_start",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        752,
+        416
+      ],
+      "id": "0ce227d2-6b14-448f-a10e-96496978a17d",
+      "name": "TIME_START",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b3eb712a-8385-438a-b8d9-d11e2132323c",
+              "name": "Time_Consumed",
+              "value": "={{$('TTR_SECONDS').item.json.ttr_seconds.minutes}}:{{$('TTR_SECONDS').item.json.ttr_seconds.seconds}}:{{$('TTR_SECONDS').item.json.ttr_seconds.milliseconds}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -240,
+        1024
+      ],
+      "id": "49499815-fc5c-4bed-b9be-87fa95e1283c",
+      "name": "Edit Fields",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        160
+      ],
+      "id": "4602ce63-66be-4910-aa1a-2aa3d539a8b8",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "065d5e76-fc16-4415-87f9-04ca2acac2c3",
+              "name": "counter",
+              "value": "={{ $node['TEMP_VARIABLES'].json['counter'] += 1}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1312,
+        1104
+      ],
+      "id": "1bbb264b-194a-44b2-84d3-239cdb5f1908",
+      "name": "COUNTER++",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "5ae18add-afbd-4a90-adb1-0e34d482b717",
+              "leftValue": "={{ $node['TEMP_VARIABLES'].json['counter'] }}",
+              "rightValue": "={{ $('TEMP_VARIABLES').item.json.Execute_Number }}",
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -304,
+        400
+      ],
+      "id": "33fc47b5-a158-4a8d-8da8-eb990a2f4014",
+      "name": "IF_COUNTER",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "create",
+        "projectId": "p1is7ez2giiab4s",
+        "table": "mg9foi4s08jv0gz",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldName": "model",
+              "fieldValue": "={{ $node['TEMP_VARIABLES'].json['LLM_Model'] }}"
+            },
+            {
+              "fieldName": "test_run",
+              "fieldValue": "={{ $node['TEMP_VARIABLES'].json['counter'] }}"
+            },
+            {
+              "fieldName": "time_start",
+              "fieldValue": "={{ $('TIME_START').item.json.time_start }}"
+            },
+            {
+              "fieldName": "time_first_token",
+              "fieldValue": "={{ $('TIME_FIRST_TOKEN').item.json.time_first_token }}"
+            },
+            {
+              "fieldName": "ttr_seconds",
+              "fieldValue": "={{ $('TTR_SECONDS').item.json.ttr_seconds.minutes }}:{{ $('TTR_SECONDS').item.json.ttr_seconds.seconds }}.{{ $('TTR_SECONDS').item.json.ttr_seconds.milliseconds }}"
+            },
+            {
+              "fieldName": "status",
+              "fieldValue": "={{ $node['HTTP_RESULT'].json['result'] }}"
+            },
+            {
+              "fieldName": "notes"
+            },
+            {
+              "fieldName": "prompt_format",
+              "fieldValue": "={{ $node['TEMP_VARIABLES'].json['prompt_format'] }}"
+            },
+            {
+              "fieldName": "completion_tokens",
+              "fieldValue": "={{ $('HTTP_MODEL_CONSUME').item.json.body.usage.completion_tokens }}"
+            },
+            {
+              "fieldName": "prompt_tokens",
+              "fieldValue": "={{ $('HTTP_MODEL_CONSUME').item.json.body.usage.prompt_tokens }}"
+            },
+            {
+              "fieldName": "total_tokens",
+              "fieldValue": "={{ $('HTTP_MODEL_CONSUME').item.json.body.usage.total_tokens }}"
+            },
+            {
+              "fieldName": "output",
+              "fieldValue": "={{ $('HTTP_MODEL_CONSUME').item.json.body.choices[0].message.content }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 3,
+      "position": [
+        816,
+        1024
+      ],
+      "id": "22ca661b-a45b-4203-bbbd-598888dd4267",
+      "name": "ADD_BenchMark",
+      "alwaysOutputData": true,
+      "credentials": {
+        "nocoDbApiToken": {
+          "id": "TJatolG8I0XQncG2",
+          "name": "NocoDB"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1072,
+        1024
+      ],
+      "id": "9bb75006-bb24-4957-9c57-baee49833051",
+      "name": "WAIT_1_SEC",
+      "webhookId": "34ce2270-89db-4c28-baec-4bff225b9a61",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node['TEMP_VARIABLES'].json['URL_MODEL'] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "={{ $node['TEMP_VARIABLES'].json['model_header'] }}",
+              "value": "={{ $node['TEMP_VARIABLES'].json['model_api_key'] }}"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"{{ $node['TEMP_VARIABLES'].json['LLM_Model'] }}\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": {{ $('PROMPT').item.json.Prompt }}\n    }\n  ],\n  \"seed\": 0,\n  \"temperature\": 0.0,\n  \"num_retries\": 0,\n  \"caching\": 0\n}",
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          },
+          "timeout": "={{ $node['TEMP_VARIABLES'].json['time_out_request'] }}"
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        992,
+        416
+      ],
+      "id": "2e9b5837-9e25-4327-885d-3f44be7b5e28",
+      "name": "HTTP_MODEL_CONSUME",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "f8ea658f-4a0e-41a2-b6b6-77b0baf1e012",
+              "leftValue": "={{ $('HTTP_MODEL_CONSUME').item.json.statusCode }}",
+              "rightValue": 200,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        16,
+        1024
+      ],
+      "id": "ec32450f-33f3-4ed9-a3f8-3864dee0f944",
+      "name": "HTTP_RESPONSE",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "249ba3b2-1185-4784-a758-7ee136127174",
+              "name": "result",
+              "value": "failed",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        320,
+        1120
+      ],
+      "id": "8b2a7a8e-4484-4ff2-ae0b-6664598b80a3",
+      "name": "HTTP_FAILED",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "977f534a-0192-4b15-b29a-e138818050db",
+              "name": "result",
+              "value": "success",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        320,
+        928
+      ],
+      "id": "7631cc00-996e-4894-a864-0a7bf381eb5c",
+      "name": "HTTP_SUCESS",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7f446d42-27a3-4ce9-9ead-78f991ef1a3f",
+              "name": "result",
+              "value": "={{ $json.result }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        576,
+        1024
+      ],
+      "id": "3ccfde93-bdd1-48b0-9c49-5412594f0839",
+      "name": "HTTP_RESULT",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $node['TEMP_VARIABLES'].json['prompt_format'] }}",
+                    "rightValue": "symbolic",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "d8e08a38-bf90-4125-a8fc-a7531698c1ce"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Symbolic"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "b6dda560-1916-460d-abe4-e177187c4c08",
+                    "leftValue": "={{ $node['TEMP_VARIABLES'].json['prompt_format'] }}",
+                    "rightValue": "dsl_json",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "DSL_JSON"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "d77ace0c-57cb-4ff2-9242-29fd1adfe1ea",
+                    "leftValue": "={{ $node['TEMP_VARIABLES'].json['prompt_format'] }}",
+                    "rightValue": "normal",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Normal"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -32,
+        400
+      ],
+      "id": "bac72acc-e74d-4297-a509-c0060b96305d",
+      "name": "PROMPT_SWITCH",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "import json\nSPF_BEGIN = '''\n[SYSTEM]\n[ROLE] ::=> User_Say_Hello\n[TASK] ::=\n  _response_user := \"HELLO\"\n[CONSTRAINTS] ::=\n- NO_ADD_COMMENTS_OR_PROSE\n[OUTPUT] ::= _response_user\n'''\n\nfor item in _input.all():\n  item.json.prompt = json.dumps(SPF_BEGIN)\nreturn _input.all()\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        256
+      ],
+      "id": "d6719156-48da-460e-ae6a-c4c869ff882a",
+      "name": "SP_SIMPLE",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "import json\nSPF_BEGIN = '''\n{\n\"prompt_configuration\": {\n\"role\": \"User_Say_Hello\",\n\"description\": \"Simple greeting bot that only responds with HELLO\"\n},\n\"task\": {\n\"action\": \"respond_with_greeting\",\n\"response_value\": \"HELLO\"\n},\n\"constraints\": [\n\"NO_ADD_COMMENTS_OR_PROSE\",\n\"NO_CONVERSATIONAL_FILLER\",\n\"EXACT_OUTPUT_ONLY\"\n],\n\"output\": {\n\"type\": \"string\",\n\"value\": \"HELLO\",\n\"description\": \"The exact string to return\"\n}\n}\n'''\n\nfor item in _input.all():\n  item.json.prompt = json.dumps(SPF_BEGIN)\nreturn _input.all()\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        416
+      ],
+      "id": "e8a931c3-67d9-4424-a87f-4d44e13742ab",
+      "name": "DSL/JSON_SIMPLE",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "import json\nSPF_BEGIN = '''\n# ROLE\nYou are a simple greeting bot called \"User_Say_Hello\".\n# TASK\nYour only task is to respond to the user with the word \"HELLO\".\n# CONSTRAINTS\n- Do NOT add any comments, explanations, or additional text\n- Do NOT use prose or conversational filler\n- Your entire response must be exactly one word: HELLO\n# OUTPUT\nHELLO\n'''\n\nfor item in _input.all():\n  item.json.prompt = json.dumps(SPF_BEGIN)\nreturn _input.all()\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        576
+      ],
+      "id": "f5251d4c-3dcf-44ce-9f5a-8e97957d3b0c",
+      "name": "NORMAL_SIMPLE",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "10f5ecd0-8765-4987-9d92-7562123bcadb",
+              "name": "Prompt",
+              "value": "={{ $json.prompt }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        528,
+        416
+      ],
+      "id": "6dd71268-dc21-42f7-b835-f1a65f6a620b",
+      "name": "PROMPT",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "outputFieldName": "time_first_token",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        1232,
+        416
+      ],
+      "id": "c323c413-4e33-48a5-a955-989095535dce",
+      "name": "TIME_FIRST_TOKEN",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "operation": "getTimeBetweenDates",
+        "startDate": "={{ $('TIME_START').item.json.time_start }}",
+        "endDate": "={{ $('TIME_FIRST_TOKEN').item.json.time_first_token }}",
+        "units": [
+          "minute",
+          "second",
+          "millisecond"
+        ],
+        "outputFieldName": "ttr_seconds",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        1440,
+        528
+      ],
+      "id": "cd7aeccb-606a-405a-ae4a-2a43b1fbde4c",
+      "name": "TTR_SECONDS",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "content": "# TEMP_VARIABLES\n## UPDATE VARIABLES BASED ON YOUR NEEDS\n# ------------------------------\n## **Execute_Number:** 10 - Maximum test (Ex. 10)\n## **counter: 1** (Counter initialized in 1)\n# ------------------------------\n## There exist 3 prompts_format. \n## - Only configure the prompt that you should use as prompt_format. \n## - Another case add \"prompt_format_x\"",
+        "height": 688,
+        "width": 576,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -960,
+        -96
+      ],
+      "typeVersion": 1,
+      "id": "0121e205-6cb1-4c51-93b9-4d63f9e846c3",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "# PROMPT SELECTION BASED ON \"prompt_format\"\n# Extract time_begin, time_first_token, ttr_seconds\n## PROMPT_SWITCH cycles through the three formats (Normal → DSL/JSON → Symbolic) for each iteration to ensure fair comparison.\n## TRR_SECONDS: Compare TIME_FIRST_TOKEN - TIME_START\n## !!! NOTE: In case the HTTP_NODE not work to call the LLM. Replace by AI Agent or your Model and configure it with the right parameters.",
+        "height": 816,
+        "width": 1984,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -368,
+        -96
+      ],
+      "typeVersion": 1,
+      "id": "c6295649-b101-4485-9cbe-f27316b05d42",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "# DATA STORED IN NOCODB\n## QUESTION: Why wait 1 second? That distorts the actual throughput.\n## RESPONSE: The wait is to avoid rate limiting, not to measure throughput. The latency metrics (TTR) are not affected because the wait happens after receiving the response.",
+        "height": 560,
+        "width": 1984,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -368,
+        736
+      ],
+      "typeVersion": 1,
+      "id": "05f46987-772a-4a90-a46f-232775abcddf",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "# ------------------------------\n## time_out_request: 50000 (Configure based on your needs. Configure it in milliseconds \"50000\")\n## LLM_Model -> Replace by your model (Example: claude-3-haiku)\n## URL_MODEL -> URL of Your Model\n## model_header -> Model Header (Example: x-llm-api-key)\n## model_api_key -> Your API Key\n# ------------------------------\n## QUESTION: What if I want to try 5 formats?\n## RESPONSE: To add more formats, duplicate the prompt nodes and update the PROMPT_SWITCH logic to cycle through N formats.\n# ------------------------------\n# HAPPY BENCHMARK",
+        "height": 704,
+        "width": 576,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -960,
+        592
+      ],
+      "typeVersion": 1,
+      "id": "86efb831-3684-4b64-85ef-c745af27cb9a",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "# COMPLEX PROMPTS\n## You can replace Simple prompt (Ex. SP_SIMPLE by SP_Complex)\n## SP_ = Symbolic Prompting\n## DSL/JSON_ = DSL / JSON Format\n## NormalPrompt_ = Normal Prompt",
+        "height": 1392,
+        "width": 384,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1632,
+        -96
+      ],
+      "typeVersion": 1,
+      "id": "1cfa90d8-c6db-428c-a285-1dba106c5233",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "import json\nSPF_BEGIN = '''\n[SYSTEM]\n[ROLE] ::=> HTML_Pattern_Detector\n[CONTEXT] ::=> HTML_Code+NPM_Packages+MITRE_ID\n$RAW_LOG := \"\"\"\n'''\nSPF_END = '''\n\"\"\"\n[LOGIC] ::=\n\tIF NPM_Package_Syntax($RAW_LOG) == true THEN:\n\t\t_npm_pkg_detected ::= true\n\tELSE:\n\t\t_npm_pkg_detected ::= false\n\tENDIF\n[TASK] ::=\n\tIF _npm_pkg_detected == true THEN:\n\t\t_npm_list := Extract_NPM_Package($RAW_LOG)\n\t\tIF Contain_Version(_npm_list) THEN:\n\t\t\t_output_format := Output_Format_JSON(_npm_list, \"PkgName:Package_Name\" + \"Version:Package_Version\")\n\t\tELSE:\n\t\t\t_output_format := Output_Format_JSON(_npm_list, \"PkgName:Package_Name\" + \"Version:\")\n[F_CREATE_TITLE] {\n\t_title_new := Create_Title_Based($RAW_LOG)+RESTRICT(3_words) <- UPPER_CASE\n}\n[F_MITRE_ID] {\n\t_mitre_id_detected := Extract_Tacticts(Read_Article($RAW_LOG))+MITRE_ATT&CK_ID <- JSON_Format{\"ID\":\"Mitre_ID\",\"Title\":\"Mitre_Title\"}\n}\n[F_TITLE_DESC] {\n\t_title_description := Generate_Description(Identify_Values($RAW_LOG) <- Cyber_Security_Assets[IP_ADDRESS,CWE,CVE,Country])-MAXIMUM_70_WORDS\n}\n[FLOW] ::= \n\tCALL [LOGIC] WITH $RAW_LOG -> _npm_pkg_detected\n\tCALL [TASK] WITH {$RAW_LOG, _npm_pkg_detected} -> [OUTPUT]\n\tCALL [F_CREATE_TITLE] WITH $RAW_LOG -> [OUTPUT] \n\tCALL [F_MITRE_ID] WITH $RAW_LOG -> [OUTPUT]\n\tCALL [F_TITLE_DESC] WITH $RAW_LOG -> [OUTPUT]\n[CONSTRAINTS] ::=\n- UPPER_CASE_FORMAT(_title_new)\n- NO_ADD_COMMENTS_OR_PROSE\n- RAW_JSON_FORMAT([OUTPUT],_mitre_id_detected)\n- NO_MARKDOWN([OUTPUT],_mitre_id_detected)\n- STRICT_NPM_VALIDATOR\n[OUTPUT] ::= {\"Title\": _title_new, \"Package_List\": _output_format, \"MITRE\": _mitre_id_detected, \"Description\": _title_description}\n'''\n\nfor item in _input.all():\n  item.json.prompt = json.dumps(SPF_BEGIN + item.json.textContent + SPF_END)\nreturn _input.all()\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1696,
+        416
+      ],
+      "id": "ef7d288e-79ea-456d-8b25-2c5fe875b919",
+      "name": "SP_Complex1"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "import json\nSPF_BEGIN = '''\n{\n  \"prompt_configuration\": {\n    \"role\": \"Expert at detecting patterns and extracting information from HTML code to identify NPM package names, versions, and MITRE IDs.\",\n    \"context\": \"Analysis of articles regarding CyberSecurity Malicious Attacks Campaigns to NPM Packages.\",\n    \"input_variable\": \"\n'''\nSPF_END = '''\n\"\n  },\n  \"validation_logic\": {\n    \"conditions\": [\n      \"Article is written about NPM\",\n      \"Mentions at least 2 malicious npm packages\",\n      \"Mentions 'CyberSecurity Malicious Attacks Campaigns to NPM Packages'\"\n    ],\n    \"fallback_action\": {\n      \"condition\": \"If validation fails (not about NPM/Attacks or no packages found)\",\n      \"required_output\": {\n        \"npm_package\": \"\",\n        \"version\": \"\",\n        \"title\": \"\",\n        \"date_published\": \"YYYY/MM/DD\",\n        \"mitre_variable\": [],\n        \"attack_comment\": \"\",\n        \"hash_value\": \"\"\n      }\n    }\n  },\n  \"instructions\": {\n    \"title_generation\": {\n      \"variable\": \"title\",\n      \"constraints\": [\n        \"Must contain exactly 3 words\",\n        \"Uppercase only\",\n        \"No plural words\",\n        \"Standardized keywords: SOCIAL ENGINEERING ATTACK, PHANTOMRAVEN SUPPLY CHAIN, LAZARUS TYPOSQUATTING MALWARE, XSEC MALWARE EXFILTRATION\"\n      ]\n    },\n    \"mitre_extraction\": {\n      \"variable\": \"mitre_variable\",\n      \"format\": \"JSON Array of Objects: {'ID': 'MITRE-ID', 'Text': 'Mitre Title'}\",\n      \"requirement\": \"Must be real and existing MITRE ATT&CK IDs. If not found, return empty array.\"\n    },\n    \"attack_description\": {\n      \"variable\": \"attack_comment\",\n      \"constraints\": [\n        \"Fewer than 70 words\",\n        \"Include tactics/effects (e.g., CWE, CVE, IPs, Country, OS, Attack type)\"\n      ]\n    },\n    \"identifier_generation\": {\n      \"variable\": \"hash_value\",\n      \"format\": \"SHA1\",\n      \"requirement\": \"Must be a unique random hash.\"\n    },\n    \"date_extraction\": {\n      \"variable\": \"date_published\",\n      \"format\": \"YYYY/MM/DD\"\n    },\n    \"npm_extraction\": {\n      \"variable\": \"packages\",\n      \"patterns_name\": [\n        \"@package/name@version\",\n        \"@package/name\",\n        \"name version\",\n        \"name@version\",\n        \"name (version)\",\n        \"name: version, version\"\n      ],\n      \"patterns_version\": [\n        \"X.X.X\",\n        \"XX.XX.XXX\"\n      ],\n      \"extraction_rules\": [\n        \"Extract from text or HTML tables\",\n        \"If multiple versions exist for one package (e.g., 2.0.22, 2.0.28), create separate entries for each\",\n        \"If version is invalid (e.g., '100.1 million' or 'compromised'), leave version empty\",\n        \"If no version found, set version to ''\"\n      ]\n    }\n  },\n  \"output_format\": {\n    \"type\": \"JSON\",\n    \"structure\": {\n      \"npm_package\": \"string\",\n      \"version\": \"string\",\n      \"title\": \"string (UPPERCASE)\",\n      \"date_published\": \"string (YYYY/MM/DD)\",\n      \"mitre_variable\": \"array\",\n      \"attack_comment\": \"string\",\n      \"hash_value\": \"string (SHA1)\"\n    },\n    \"final_notes\": \"No description or comments. If no npm package is identified, print an empty response.\"\n  }\n}\n'''\n\nfor item in _input.all():\n  item.json.prompt = json.dumps(SPF_BEGIN + item.json.textContent + SPF_END)\nreturn _input.all()\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1712,
+        624
+      ],
+      "id": "02823477-8f26-4a30-9bdb-0d2f4e33998f",
+      "name": "DSL/JSON_Complex1"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "import json\nSPF_BEGIN = '''\n# ROLE\nYou are an expert at detecting patterns and extracting information from HTML code related to detect NPM package names and versions. Based on what you read, you have the skills to detect MITRE ID.\n\n# TASK\nYou read the full article \"\n'''\nSPF_END = '''\n\"\n and MUST validate if the article is written about NPM, mentions at least 2 malicious npm packages, and mentions something regarding \"CyberSecurity Malicious Attacks Campaigns to NPM Packages\".\n- If the article talked about NPM and CyberSecurity Attacks, follow all the INSTRUCTIONS.\n- If the article did NOT talk about NPM and CyberSecurity Attacks OR NOT contain npm packages. You need to follow the instructions, but the result MUST BE the output should be in JSON format, only the name of the npm package (empty), version of the npm package (empty), title (empty), date_published in the format (YYYY/MM/DD), mitre_variable (empty), attack_comment (empty), and hash_value (empty).\n\n\nINSTRUCTIONS:\nYou need to read the full article and validate/extract some information:\n- Generate a cybersecurity title that MUST only contain 3 words. The title should be easy to identify, and try to standardise the title using keywords like: SOCIAL ENGINEERING ATTACK, PHANTOMRAVEN SUPPLY CHAIN, LAZARUS TYPOSQUATTING MALWARE, XSEC MALWARE EXFILTRATION,... The main point of the title is to create a family of Attacks to easy to track. Save the title value in the variable \"title\".\n- You need to extract the main tactics based on MITRE ATT&CK (ID and Title of MITRE ATT&CK). The MITRE ID must be real and exist. You can save the list in one variable like an OBJECT single JSON, as part of the variable is \"mitre_variable\". In case you can not find any related \"MITRE-ID\", create the variable \"mitre_variable\" in JSON format, empty.\n- You MUST create a description (Using fewer than 70 words) that can help you identify the main cybersecurity tactics / malicious attack effects (Example: CWE-123, CVE-2024-1234, IP: 8.12.15.24, Country: North Korean, Operative System: Linux, Attack: typosquatting, Dependency confusion, Dependency Hijacking, ...), and save the value in the variable \"attack_comment\".\n- You MUST create a random hash, the hash must be a unique identifier, and save the value in \"hash_value\".\n- You MUST extract the date when the article was published in the format YYYY/MM/DD save the value in the variable \"date_published\"\n- You MUST extract and detect ALL NPM packages written in the article based on the following patterns:\n\nPatterns of the name format:\n- @package/name@version\n- @package/name\n- name version\n- name@version\n- name@version, name@version, name@version\n- name (version)\n- name version, version, version\n- name: version, version\n\nPattern of the version format:\n- 2.0.15\n- 10.15.350\n- 15.150.1\n\nCompleted pattern example: @package/name - version such as: debug - 1.0.15, chalk - 20.4.103\nIn case you find a similar result: debug - 100.1 million, chalk - compromised, then you need to write debug - , chalk - .\n\nYou need to find the information of the npm package and the version affected.\nThe pattern could be inside of a table or in the HTML code.\n\nWhen the data is inside of the table, you can find tables similar to the following example:\n\n| PACKAGE | COMPROMISED VERSION(s) |\n| @art-ws/common | 2.0.22, 2.0.28 |\n\nIn this example, you need to extract the npm package name and version. Example of the case, name: @art-ws/common, version: 2.0.22, name:@art-ws/common, version: 2.0.28\n\nThere exist some conditions to extract the name of the package.\n- The npm package name always could contain a version.\n- In case you can not find the version, you need to write name: NPM Package, version: \"\"\nAll the information extracted should be in the variable \"packages\".\n\n# OUTPUT\nThe output should be in JSON format, only the name of the npm package, version of the npm package, title (Title MUST BE in UPPERCASE and NOT use plural words), date_published (Format YYYY/MM/DD), mitre_variable (The format MUST BE in JSON & ARRAY like this \"ID\": \"MITRE-ID\", \"Text\": \"Mitre Title\"), attack_comment, and hash_value (The format must like SHA1).\nYou don't need to add a description or comments. \n\nIn case you can not identify nothing about the npm package, print an empty response.\n'''\n\nfor item in _input.all():\n  item.json.prompt = json.dumps(SPF_BEGIN + item.json.textContent + SPF_END)\nreturn _input.all()\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1712,
+        832
+      ],
+      "id": "b0958d1d-41f1-4e51-b16b-d8c709260720",
+      "name": "NormalPrompt_Complex1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "TEMP_VARIABLES",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TEMP_VARIABLES": {
+      "main": [
+        [
+          {
+            "node": "IF_COUNTER",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TIME_START": {
+      "main": [
+        [
+          {
+            "node": "HTTP_MODEL_CONSUME",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "HTTP_RESPONSE",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "COUNTER++": {
+      "main": [
+        [
+          {
+            "node": "IF_COUNTER",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF_COUNTER": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PROMPT_SWITCH",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ADD_BenchMark": {
+      "main": [
+        [
+          {
+            "node": "WAIT_1_SEC",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WAIT_1_SEC": {
+      "main": [
+        [
+          {
+            "node": "COUNTER++",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP_MODEL_CONSUME": {
+      "main": [
+        [
+          {
+            "node": "TIME_FIRST_TOKEN",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP_RESPONSE": {
+      "main": [
+        [
+          {
+            "node": "HTTP_SUCESS",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP_FAILED",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP_FAILED": {
+      "main": [
+        [
+          {
+            "node": "HTTP_RESULT",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP_SUCESS": {
+      "main": [
+        [
+          {
+            "node": "HTTP_RESULT",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP_RESULT": {
+      "main": [
+        [
+          {
+            "node": "ADD_BenchMark",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PROMPT_SWITCH": {
+      "main": [
+        [
+          {
+            "node": "SP_SIMPLE",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "DSL/JSON_SIMPLE",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "NORMAL_SIMPLE",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SP_SIMPLE": {
+      "main": [
+        [
+          {
+            "node": "PROMPT",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DSL/JSON_SIMPLE": {
+      "main": [
+        [
+          {
+            "node": "PROMPT",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NORMAL_SIMPLE": {
+      "main": [
+        [
+          {
+            "node": "PROMPT",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PROMPT": {
+      "main": [
+        [
+          {
+            "node": "TIME_START",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TIME_FIRST_TOKEN": {
+      "main": [
+        [
+          {
+            "node": "TTR_SECONDS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TTR_SECONDS": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "99924e08-7d11-444f-99d2-0d73f1e00b05",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "7a51e3a898e1c717cc2fcc54f1b59e5d63d45f229b6bf1ed4cef63564a6aba0c"
+  },
+  "id": "htPmQVgO2r0a1YfN",
+  "tags": [
+    {
+      "createdAt": "2026-03-03T17:27:50.390Z",
+      "updatedAt": "2026-03-03T17:27:50.390Z",
+      "id": "fgNiwgV0wVQjdq91",
+      "name": "SymbolicPrompting"
+    },
+    {
+      "createdAt": "2026-03-03T17:27:58.939Z",
+      "updatedAt": "2026-03-03T17:27:58.939Z",
+      "id": "ipPmZztqOJiHtcH0",
+      "name": "PromptingBenchmark"
+    }
+  ]
+}
