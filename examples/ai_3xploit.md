@@ -645,19 +645,19 @@ SALIDA:
 The data is stored in nocodb using postgresql.
 When the CVE Description is created then the exploit is created and stored.
 
-[![NocoDB Stored](./01_nocodb.png)](./01_nocodb.mp4)
+https://github.com/user-attachments/assets/28ba9fff-050a-4461-a42b-3ee747e1b369
 
 ### 3xplo1t run
 
 Once the 3xplo1t was created, then the execution is successfully.
 
-[![Run Exploit](./02_exploit_run.png)](./02_exploit_run.mp4)
+https://github.com/user-attachments/assets/73039578-0e93-487b-a43c-d8136de09bdf
 
 ### Validate the result
 
 For this PoC, I used Claude to validate if the logs could be compromised, and it was dedicated to the CVE.
 
-[![Claude Results](./03_results.png)](./03_results.mp4)
+https://github.com/user-attachments/assets/7b7436ec-0f78-48e9-a131-b16eb10ceadd
 
 ---
 
