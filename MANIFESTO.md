@@ -9,11 +9,15 @@ Symbolic Prompting: Moving from natural language ambiguity to Deterministic-Orie
 <div align="center">
 
 
-[![GitHub Stars](https://img.shields.io/github/stars/mindhack03d/SymbolicPrompting?style=for-the-badge&logo=github&color=gold)](https://github.com/mindhack03d/SymbolicPrompting)
-[![License-MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Status](https://img.shields.io/badge/Status-Active_Course-success?style=plastic)](https://github.com/mindhack03d/SymbolicPrompting)
+[![GitHub Stars](https://img.shields.io/github/stars/mindhack03d/SymbolicPrompting?style=plastic&logo=github&color=gold&cacheBus=1)](https://github.com/mindhack03d/SymbolicPrompting)
+[![YouTube Playlist](https://img.shields.io/badge/YouTube-Course_Complete-success?style=plastic&logo=youtube)](https://youtube.com/playlist?list=PLNFL-2KY9QZVqoRwRzVLPN6qmDftpsjg6)
+[![YouTube Playlist](https://img.shields.io/badge/YouTube-Reels_EN-success?style=plastic&logo=youtube)](https://www.youtube.com/playlist?list=PLNFL-2KY9QZXhGEfGUOrrZtzGdPESwh4l)
+[![YouTube Playlist](https://img.shields.io/badge/YouTube-Reels_ES-success?style=plastic&logo=youtube)](https://youtube.com/playlist?list=PLNFL-2KY9QZUKlXC_4gnVUHoAJdd4s-AC&si=4N7ROWCD3G46y8t5l)<br>
+[![License-MIT](https://img.shields.io/badge/License-MIT-green?style=plastic)](https://opensource.org/licenses/MIT)
+[![Methodology-V2](https://img.shields.io/badge/Methodology-V2.0-blue?style=plastic)](Benchmark/benchmark_methodology.md)
+[![Benchmark](https://img.shields.io/badge/📊-Benchmark_Data-2a2a2a?style=plastic)](Benchmark/symbolic_support_test.md)
 </div>
-
-
 
 [⬅️ Back to Home](../README.md) 
 
